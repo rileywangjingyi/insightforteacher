@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insight · 见微 使用说明</title>
+<style>
+:root{
+  --bg:#fbfaf6;--panel:#ffffff;--subbg:#f4f0e6;
+  --text:#1c2826;--muted:#6e7773;--line:#e5e1d6;
+  --side:#2c4a4a;--brand:#4a9d8e;--brandSoft:#dceee9;
+  --accent:#e8c97a;--accentSoft:#fbf3dd;
+  --warn:#dba066;--warnSoft:#fbeedd;
+  --danger:#c97870;--dangerSoft:#f6dfdb;--dangerText:#9a3c33;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;font-size:15px;line-height:1.75}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+code{background:var(--subbg);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:13px}
+.hero{background:linear-gradient(135deg,var(--side) 0%,#3c6b6b 100%);color:#fff;padding:54px 24px 46px}
+.hero-inner{max-width:980px;margin:0 auto}.hero h1{font-size:40px;margin:0 0 6px;font-weight:800;letter-spacing:0}.hero .dot{color:var(--accent)}.hero p{margin:0}.hero .tagline{font-size:16px;color:rgba(255,255,255,.86);margin-bottom:12px}.hero .meta{font-size:13px;color:rgba(255,255,255,.72)}
+.wrap{max-width:980px;margin:0 auto;padding:28px 24px 80px}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:28px}
+.toc h3{margin:0 0 10px;font-size:13px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.toc ol{margin:0;padding:0;list-style:none;counter-reset:t;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}.toc li{counter-increment:t}.toc a{display:block;padding:5px 0;font-size:14px;color:var(--text)}.toc a::before{content:counter(t,decimal-leading-zero) "  ";color:var(--brand);font-weight:700;font-size:12px}
+section{margin:40px 0;scroll-margin-top:16px}h2{font-size:24px;margin:0 0 6px;color:var(--side);font-weight:700;display:flex;align-items:center;gap:10px}.num{display:inline-block;width:30px;height:30px;line-height:30px;text-align:center;background:var(--brand);color:#fff;border-radius:50%;font-size:14px;flex:0 0 auto}.what{color:var(--muted);font-size:14.5px;margin:0 0 18px;padding-left:40px}
+.quick{background:linear-gradient(135deg,var(--brandSoft),var(--accentSoft));border-radius:14px;padding:22px 26px;margin-bottom:32px}.quick h2{margin:0 0 6px;font-size:20px}.quick p{margin:0 0 16px}
+.flow{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:stretch;margin-top:16px}.flow-step{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center;min-height:112px;height:100%;display:grid;grid-template-rows:32px 38px 28px;align-items:start;justify-items:center;box-shadow:0 6px 18px rgba(44,74,74,.08)}.flow-step b{color:var(--side);font-size:14px;line-height:19px;min-height:38px;display:flex;align-items:center;justify-content:center}.flow-step span{color:var(--muted);font-size:12px;line-height:16px;margin-top:0;display:flex;align-items:start;justify-content:center}.flow-step:not(:last-child)::after{content:"";position:absolute;right:-15px;top:50%;width:18px;height:2px;background:var(--brand);z-index:2}.flow-step:not(:last-child)::before{content:"";position:absolute;right:-18px;top:calc(50% - 4px);border-left:8px solid var(--brand);border-top:5px solid transparent;border-bottom:5px solid transparent;z-index:3}.flow-icon{width:30px;height:30px;margin:0 auto;border-radius:50%;background:var(--brandSoft);color:var(--brand);display:grid;place-items:center;font-weight:800}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}.value{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.value h3{margin:0 0 6px;color:var(--side);font-size:17px}.value p{margin:0;color:var(--text);font-size:14px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 0 16px}.steps>li{counter-increment:s;position:relative;padding:10px 14px 10px 44px;margin:8px 0;background:#fff;border:1px solid var(--line);border-radius:10px}.steps>li::before{content:counter(s);position:absolute;left:12px;top:11px;width:22px;height:22px;line-height:22px;text-align:center;background:var(--brandSoft);color:var(--brand);border-radius:50%;font-weight:700;font-size:12px}.steps b{color:var(--side)}
+.tip{background:var(--brandSoft);border-left:3px solid var(--brand);padding:10px 14px;border-radius:6px;margin:14px 0;font-size:14px}.advice{background:var(--accentSoft);border-left:3px solid var(--accent);padding:12px 16px;border-radius:6px;margin-top:14px;font-size:14px}.risk{background:var(--dangerSoft);border:1px solid var(--danger);border-radius:12px;padding:20px 22px;margin:18px 0}.risk h3{margin:0 0 12px;color:var(--dangerText);font-size:17px}
+.shot{background:#fff;border:1px solid var(--line);border-radius:14px;margin:16px 0 20px;box-shadow:0 10px 28px rgba(44,74,74,.08);overflow:hidden;color:var(--text)}.shot-top{height:34px;background:var(--side);color:#d7e5e2;display:flex;align-items:center;gap:8px;padding:0 14px;font-size:12px}.win-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);display:inline-block}.mini-app{display:grid;grid-template-columns:130px 1fr;min-height:330px}.mini-side{background:#2c4a4a;color:#cfdbd9;padding:14px 10px}.mini-brand{font-weight:800;color:#fff;margin:0 0 14px}.mini-nav{padding:8px 10px;border-radius:8px;margin:5px 0;font-size:12px}.mini-nav.active{background:var(--brand);color:#fff}.mini-main{padding:16px;background:#fbfaf6}.mini-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.mini-title h3{margin:0;color:var(--side);font-size:18px}.btn{border-radius:8px;background:var(--brand);color:#fff;padding:6px 10px;font-size:12px}.mini-grid{display:grid;gap:10px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}.field{font-size:12px;color:var(--muted);margin-bottom:8px}.input{height:30px;border:1px solid var(--line);border-radius:7px;background:#fff;padding:5px 8px;color:var(--text);font-size:12px}.textarea{height:62px}.chip{display:inline-block;border-radius:999px;border:1px solid var(--line);background:#fff;padding:3px 8px;font-size:11px;margin:2px}.chip.on{background:var(--brandSoft);border-color:var(--brand);color:var(--brand)}.student-row{display:grid;grid-template-columns:1fr 70px 70px;gap:8px;align-items:center;border-top:1px solid var(--line);padding-top:8px;margin-top:8px;font-size:12px}.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:10px}.card-head{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.kpi{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:10px;padding:10px}.kpi b{font-size:20px;color:var(--side)}.kpi span{display:block;color:var(--muted);font-size:11px}.bar{height:18px;background:var(--subbg);border-radius:7px;overflow:hidden;margin:7px 0}.bar i{display:block;height:100%;background:var(--brand)}.bar.warn i{background:var(--warn)}table{width:100%;border-collapse:collapse;font-size:12px}th,td{border:1px solid var(--line);padding:6px 7px;text-align:left}th{background:var(--subbg);color:var(--side)}.fail{color:var(--dangerText);font-weight:700}.bar-chart{height:150px;display:flex;align-items:end;gap:10px;padding-top:12px}.col{flex:1;background:var(--brand);border-radius:7px 7px 0 0;min-height:20px;position:relative}.col span{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted)}.profile{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}.radar-wrap{display:grid;place-items:center}.tag-list .chip{background:var(--accentSoft);border-color:var(--accent);color:#8a6b1f}.foot{text-align:center;color:var(--muted);font-size:13px;padding:30px 20px;border-top:1px solid var(--line);margin-top:60px}.foot b{color:var(--side)}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 16px;margin:8px 0}summary{cursor:pointer;padding:12px 0;font-weight:600;color:var(--side);list-style:none}summary::-webkit-details-marker{display:none}summary::before{content:"+ ";color:var(--brand);font-weight:700}details[open] summary::before{content:"- "}details>div{padding:12px 0 14px;border-top:1px dashed var(--line);font-size:14px}
+@media(max-width:760px){.hero h1{font-size:32px}.toc ol,.value-grid,.flow,.mini-app,.g2,.g3,.g4,.kpis,.profile{grid-template-columns:1fr}.flow-step:not(:last-child)::before,.flow-step:not(:last-child)::after{display:none}.mini-side{display:none}.wrap{padding:22px 16px 60px}.what{padding-left:0}.shot{overflow:auto}.mini-main{min-width:620px}}
+</style>
+</head>
+<body>
+<div class="hero"><div class="hero-inner">
+  <h1>Insight <span class="dot">·</span> 见微</h1>
+  <p class="tagline">课后反馈记录系统 使用说明</p>
+  <p class="meta">适用：高考体系 + 国际考试体系 · 阅读时长 5 分钟 · 独立页面版</p>
+</div></div>
+<div class="wrap">
+<div class="quick">
+  <h2>5 分钟上手</h2>
+  <p>从第一次打开到看到分析报告，只需要按这条主线走。系统会把每节课的零散观察自动沉淀成学生成长档案。</p>
+  <div class="flow" aria-label="快速上手流程图">
+    <div class="flow-step"><div class="flow-icon">1</div><b>选择体系</b><span>高考或国际考试</span></div>
+    <div class="flow-step"><div class="flow-icon">2</div><b>创建班级</b><span>按年级建立班级</span></div>
+    <div class="flow-step"><div class="flow-icon">3</div><b>导入学生名单</b><span>批量粘贴姓名</span></div>
+    <div class="flow-step"><div class="flow-icon">4</div><b>建立内容库</b><span>课程、作业、标签</span></div>
+    <div class="flow-step"><div class="flow-icon">5</div><b>开始记录反馈</b><span>课后 3 分钟完成</span></div>
+    <div class="flow-step"><div class="flow-icon">6</div><b>导入成绩</b><span>月考、模考、测验</span></div>
+    <div class="flow-step"><div class="flow-icon">7</div><b>查看分析报告</b><span>学生和班级视图</span></div>
+  </div>
+</div>
+<div class="toc"><h3>目录</h3><ol>
+  <li><a href="#s1">这是什么</a></li><li><a href="#s2">新建反馈</a></li><li><a href="#s3">历史记录</a></li><li><a href="#s4">学生档案</a></li><li><a href="#s5">成绩分析</a></li><li><a href="#s6">数据看板</a></li><li><a href="#s7">设置与体系切换</a></li><li><a href="#s8">导出与备份</a></li><li><a href="#s9">数据安全</a></li><li><a href="#s10">常见问题 FAQ</a></li>
+</ol></div>
+<section id="s1"><h2><span class="num">1</span>这是什么</h2>
+  <p class="what">首次打开需要联网加载，之后即使断网也可以正常使用——所有功能在本地运行，数据录入与读取均不依赖网络。</p>
+  <p>Insight · 见微是给老师使用的课后反馈记录工具。它解决的不是“把表格做得更漂亮”，而是把课后最容易流失的观察，变成学期末真正能用的数据。</p>
+  <div class="value-grid">
+    <div class="value"><h3>省时间</h3><p>每节课后用 3 分钟完成记录。班级、科目、授课内容、学情标签都能快速选择，比在多个系统间复制粘贴更快。</p></div>
+    <div class="value"><h3>数据积累</h3><p>每一次课堂表现、作业完成度和个人反馈都会自动沉淀，不再是写完就忘的流水账。</p></div>
+    <div class="value"><h3>期末报告</h3><p>学期末可以一键生成每位学生的学科成长报告，把日常反馈、成绩变化和关注标签汇总给家长看。</p></div>
+  </div>
+</section>
+<section id="s2"><h2><span class="num">2</span>新建反馈</h2><p class="what">最常用的页面。课后选择班级、科目和学生，记录本节课的整体学情与个人表现。</p>
+  <ol class="steps"><li><b>选择班级与科目</b>：确认本次记录归属到哪个班、哪门学科。</li><li><b>填写授课内容</b>：可以自由输入，也可以从授课内容库选择。</li><li><b>勾选班级学情</b>：专注度、互动、作业完成情况等用标签快速完成。</li><li><b>补充个人反馈</b>：给需要关注的学生记录专注度评分、作业完成度和简短评语。</li></ol>
+  <div class="shot"><div class="shot-top"><span class="win-dot"></span>新建反馈页示例</div><div class="mini-app"><div class="mini-side"><div class="mini-brand">Insight · 见微</div><div class="mini-nav active">新建反馈</div><div class="mini-nav">历史记录</div><div class="mini-nav">学生汇总</div><div class="mini-nav">成绩分析</div><div class="mini-nav">系统设置</div></div><div class="mini-main"><div class="mini-title"><h3>新建反馈</h3><span class="btn">保存反馈</span></div><div class="mini-grid g2"><div class="panel"><div class="field">班级</div><div class="input">高二 3 班</div></div><div class="panel"><div class="field">科目</div><div class="input">数学</div></div></div><div class="panel"><div class="field">授课内容</div><div class="input textarea">函数单调性与导数应用；课后作业：P86 第 3、5、7 题</div><div class="field">班级学情</div><span class="chip on">专注度高</span><span class="chip on">互动积极</span><span class="chip">作业完成一般</span><span class="chip on">需复盘错题</span></div><div class="panel"><b>个人反馈</b><div class="student-row"><span>林若曦</span><span>专注 4/5</span><span>作业 90%</span></div><div class="student-row"><span>陈嘉禾</span><span>专注 3/5</span><span>作业 70%</span></div><div class="student-row"><span>周奕辰</span><span>专注 5/5</span><span>作业 100%</span></div></div></div></div></div>
+  <div class="tip"><b>小贴士：</b>如果一节课要给多名学生写反馈，先记录班级整体情况，再补充个人反馈会更快。</div>
+</section>
+<section id="s3"><h2><span class="num">3</span>历史记录</h2><p class="what">查看、筛选、修改过去填过的所有反馈。</p>
+  <ol class="steps"><li><b>筛选</b>：按班级、科目、月份、关键词查找记录。</li><li><b>查看摘要</b>：记录卡片会显示日期、班级、科目、内容摘要和涉及学生人数。</li><li><b>回看细节</b>：需要复盘时可以打开完整记录。</li></ol>
+  <div class="shot"><div class="shot-top"><span class="win-dot"></span>历史记录页示例</div><div class="mini-app"><div class="mini-side"><div class="mini-brand">Insight · 见微</div><div class="mini-nav">新建反馈</div><div class="mini-nav active">历史记录</div><div class="mini-nav">学生汇总</div><div class="mini-nav">成绩分析</div></div><div class="mini-main"><div class="mini-title"><h3>历史记录</h3><span class="btn">导出 Excel</span></div><div class="mini-grid g4"><div class="input">高二 3 班</div><div class="input">数学</div><div class="input">2026-05</div><div class="input">导数</div></div><div class="card"><div class="card-head"><span>2026-05-24 · 高二 3 班 · 数学</span><b>4 人反馈</b></div><p>导数与函数单调性。整体互动积极，陈嘉禾作业订正不完整，林若曦解题表达有提升。</p><span class="chip on">互动积极</span><span class="chip">需复盘错题</span></div><div class="card"><div class="card-head"><span>2026-05-20 · 高二 1 班 · 英语</span><b>3 人反馈</b></div><p>阅读理解主旨题训练。王思源速度较慢，黄一诺词汇掌握稳定。</p><span class="chip on">阅读策略</span><span class="chip">词汇积累</span></div></div></div></div>
+</section>
+<section id="s4"><h2><span class="num">4</span>学生档案</h2><p class="what">把一个学生的反馈、成绩、知识点掌握和自动标签汇总到一张卡片中。</p>
+  <ol class="steps"><li><b>选择学生</b>：左侧学生列表点击姓名。</li><li><b>看统计</b>：被记录次数、作业完成率、最近反馈都会自动汇总。</li><li><b>看画像</b>：雷达图展示各科表现百分比，下方标签帮助判断沟通重点。</li></ol>
+  <div class="shot"><div class="shot-top"><span class="win-dot"></span>学生档案页示例</div><div class="mini-app"><div class="mini-side"><div class="mini-brand">Insight · 见微</div><div class="mini-nav">新建反馈</div><div class="mini-nav">历史记录</div><div class="mini-nav active">学生汇总</div><div class="mini-nav">成绩分析</div></div><div class="mini-main"><div class="mini-title"><h3>林若曦 · 学生档案</h3><span class="btn">导出 PDF</span></div><div class="kpis"><div class="kpi"><b>18</b><span>被记录次数</span></div><div class="kpi"><b>92%</b><span>作业完成率</span></div><div class="kpi"><b>+7</b><span>数学进步</span></div><div class="kpi"><b>4.5</b><span>平均专注度</span></div></div><div class="profile"><div class="panel"><b>近期反馈</b><p>导数应用题思路更清晰，愿意主动解释解题过程。英语阅读速度仍需稳定训练。</p><div class="tag-list"><span class="chip">进步明显</span><span class="chip">表达更主动</span><span class="chip">阅读速度待提升</span></div></div><div class="panel radar-wrap"><svg width="220" height="190" viewBox="0 0 220 190" role="img" aria-label="各科百分比雷达图"><g transform="translate(110 94)" fill="none" stroke="#e5e1d6"><polygon points="0,-78 67,-39 67,39 0,78 -67,39 -67,-39"/><polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26"/><polygon points="0,-26 22,-13 22,13 0,26 -22,13 -22,-13"/></g><g transform="translate(110 94)" fill="rgba(74,157,142,.26)" stroke="#4a9d8e" stroke-width="2"><polygon points="0,-68 58,-34 50,29 0,62 -48,28 -54,-31"/></g><g font-size="11" fill="#6e7773" text-anchor="middle"><text x="110" y="10">语文 87</text><text x="190" y="56">数学 91</text><text x="190" y="139">英语 78</text><text x="110" y="184">物理 84</text><text x="30" y="139">化学 82</text><text x="30" y="56">生物 88</text></g></svg></div></div></div></div></div>
+</section>
+<section id="s5"><h2><span class="num">5</span>成绩分析</h2><p class="what">导入月考、模考或单元测成绩，自动生成班级和单科分析。</p>
+  <ol class="steps"><li><b>录入考试</b>：填写考试名称、日期和满分。</li><li><b>导入分数</b>：可以手动录入，也可以从 Excel 粘贴。</li><li><b>查看分析</b>：均分、最高分、最低分、及格率和学生明细自动生成。</li></ol>
+  <div class="shot"><div class="shot-top"><span class="win-dot"></span>成绩分析页示例</div><div class="mini-app"><div class="mini-side"><div class="mini-brand">Insight · 见微</div><div class="mini-nav">新建反馈</div><div class="mini-nav">学生汇总</div><div class="mini-nav active">成绩分析</div><div class="mini-nav">数据概览</div></div><div class="mini-main"><div class="mini-title"><h3>高二 3 班 · 五月月考</h3><span class="btn">导入成绩</span></div><div class="mini-grid g2"><div class="panel"><table><tr><th>科目</th><th>最高</th><th>最低</th><th>均分</th><th>及格率</th></tr><tr><td>语文</td><td>118</td><td>82</td><td>101.4</td><td>96%</td></tr><tr><td>数学</td><td>136</td><td class="fail">54</td><td>92.6</td><td>84%</td></tr><tr><td>英语</td><td>132</td><td>76</td><td>105.8</td><td>92%</td></tr><tr><td>物理</td><td>91</td><td class="fail">42</td><td>68.5</td><td>78%</td></tr><tr><td>化学</td><td>88</td><td>51</td><td>70.2</td><td>81%</td></tr><tr><td>生物</td><td>86</td><td>55</td><td>72.9</td><td>89%</td></tr></table></div><div class="panel"><b>各科均分</b><div class="bar-chart"><div class="col" style="height:78%"><span>语</span></div><div class="col" style="height:70%;background:#e8c97a"><span>数</span></div><div class="col" style="height:82%"><span>英</span></div><div class="col" style="height:58%;background:#dba066"><span>物</span></div><div class="col" style="height:62%"><span>化</span></div><div class="col" style="height:65%;background:#c97870"><span>生</span></div></div></div></div><div class="panel"><table><tr><th>排名</th><th>学生</th><th>语文</th><th>数学</th><th>英语</th><th>物理</th><th>总分</th></tr><tr><td>1</td><td>林若曦</td><td>112</td><td>128</td><td>124</td><td>86</td><td>650</td></tr><tr><td>12</td><td>陈嘉禾</td><td>96</td><td class="fail">54</td><td>88</td><td>61</td><td>496</td></tr></table></div></div></div></div>
+</section>
+<section id="s6"><h2><span class="num">6</span>数据看板</h2><p class="what">全班或全部学生的整体情况一屏看完，适合班主任、备课组长和阶段复盘。</p>
+  <div class="shot"><div class="shot-top"><span class="win-dot"></span>数据看板页示例</div><div class="mini-app"><div class="mini-side"><div class="mini-brand">Insight · 见微</div><div class="mini-nav">新建反馈</div><div class="mini-nav">历史记录</div><div class="mini-nav">学生汇总</div><div class="mini-nav active">数据概览</div></div><div class="mini-main"><div class="mini-title"><h3>数据看板</h3><span class="btn">本月</span></div><div class="kpis"><div class="kpi"><b>286</b><span>累计反馈数</span></div><div class="kpi"><b>6</b><span>科目数</span></div><div class="kpi"><b>4</b><span>班级数</span></div><div class="kpi"><b>156</b><span>学生数</span></div></div><div class="mini-grid g2"><div class="panel"><b>各科目记录数</b><div class="bar"><i style="width:88%"></i></div><small>数学 76</small><div class="bar warn"><i style="width:72%"></i></div><small>英语 62</small><div class="bar"><i style="width:55%"></i></div><small>物理 48</small><div class="bar"><i style="width:44%"></i></div><small>化学 39</small></div><div class="panel"><b>标签分布</b><div class="tag-list" style="margin-top:10px"><span class="chip">作业完成好 68</span><span class="chip">互动积极 54</span><span class="chip">需复盘错题 41</span><span class="chip">专注度波动 27</span><span class="chip">进步明显 23</span><span class="chip">需家长沟通 9</span></div></div></div></div></div></div>
+</section>
+<section id="s7"><h2><span class="num">7</span>设置与体系切换</h2><p class="what">切换高考或国际体系，管理班级、学生名单、授课内容库和标签阈值。</p><ol class="steps"><li><b>切换体系</b>：设置中选择“高考体系”或“国际考试体系”。</li><li><b>管理班级和学生</b>：新建班级、批量导入学生名单。</li><li><b>维护内容库</b>：提前录入常用课程内容和作业，记录时直接选择。</li></ol></section>
+<section id="s8"><h2><span class="num">8</span>导出与备份</h2><p class="what">把数据导出成文件，自己留底，或换电脑继续使用。</p><ol class="steps"><li><b>导出 JSON 备份</b>：这是完整数据快照，包含反馈、成绩、设置。</li><li><b>恢复 JSON 备份</b>：换电脑或浏览器后导入备份即可继续使用。</li><li><b>导出 Excel / PDF</b>：历史记录、成绩分析和学生报告都可以用于归档或沟通。</li></ol><div class="advice"><b>建议：</b>每周或每两周做一次 JSON 备份，存到网盘、邮箱或本地硬盘。</div></section>
+<section id="s9"><h2><span class="num">9</span>数据安全</h2><p class="what">真正的风险不是空间不够，而是本地浏览器数据可能被清理。请务必定期备份。</p><div class="risk"><h3>三条会让数据消失的真实风险</h3><ul><li>清除浏览器缓存或网站数据可能清空本地记录。</li><li>换电脑或换浏览器，数据不会自动跟着走。</li><li>浏览器异常或系统重装可能造成数据丢失。</li></ul></div><div class="advice"><b>怎么防：</b>定期导出 JSON 备份。换电脑时把 JSON 文件导入即可恢复。</div></section>
+<section id="s10"><h2><span class="num">10</span>常见问题 FAQ</h2>
+  <details open><summary>需要联网吗？</summary><div>首次通过网址打开时需要联网加载文件。加载完成后，即使断网也可以正常使用所有功能，包括录入数据、查看分析、导出报告。数据保存在本地浏览器中，不涉及任何网络请求。如果使用本地 HTML 文件打开，则完全不需要联网。</div></details>
+  <details><summary>数据存在哪里？</summary><div>数据保存在本地浏览器中。清理浏览器数据、换浏览器或换电脑时不会自动同步，请定期导出 JSON 备份。</div></details>
+  <details><summary>可以多个老师共用吗？</summary><div>同一台电脑、同一个浏览器可以共用一份数据。跨老师协作建议通过定期导出和导入 JSON 备份同步。</div></details>
+  <details><summary>能在 iPad 或手机上用吗？</summary><div>可以。手机适合临时记录反馈；成绩分析、设置和导出报告建议在电脑上操作。</div></details>
+  <details><summary>不小心删了一条反馈能恢复吗？</summary><div>系统内没有回收站。如果有最近的 JSON 备份，可以导入备份恢复。导入前建议先导出当前数据留底。</div></details>
+  <details><summary>导入成绩说“未识别到姓名列”怎么办？</summary><div>检查表格第一行是不是表头，例如“姓名”“学号”“语文”。确认其中一列是中文姓名，并删除多余标题行后再重试。</div></details>
+  <details><summary>同一名学生在不同班级出现怎么办？</summary><div>系统按“班级 + 姓名”识别。换班后的学生在新班级会算作新的学生记录；如需保留完整历史，建议先导出 JSON 备份再处理。</div></details>
+  <details><summary>反馈记录会自动备份吗？</summary><div>不会。请养成定期导出 JSON 的习惯，建议每周至少备份一次，数据量大或使用频繁时可以每天备份。</div></details>
+  <details><summary>Excel 导入失败怎么办？</summary><div>先导出一份系统模板，对照模板检查列名、姓名列和分数列。多余合并单元格、空行、标题行都可能影响识别。</div></details>
+</section>
+</div>
+<div class="foot"><b>Insight · 见微</b> · 课后反馈记录系统<br>使用说明 v1.1 · 2026-05-26</div>
+</body>
+</html>

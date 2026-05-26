@@ -11,7 +11,7 @@
     input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 11px;background:#fff;color:var(--text);outline:none;transition:border-color .16s ease,box-shadow .16s ease}input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(74,157,142,.16)}textarea{min-height:86px;resize:vertical}.small{font-size:12px;color:var(--muted)}.hidden{display:none!important}
     .app{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.side{position:sticky;top:0;height:100vh;background:var(--side);color:var(--sideText);padding:20px 14px;display:flex;flex-direction:column}.brand{font-size:19px;font-weight:800;margin:4px 8px 8px;color:#fff;letter-spacing:0}.brand .dot{color:var(--accent);margin:0 2px}.brand-sub{color:var(--sideTextMuted);border-bottom:1px solid rgba(255,255,255,.08);padding:0 8px 14px;margin-bottom:22px;font-size:12px}.nav button{display:block;width:100%;text-align:left;margin:7px 0;background:transparent;color:var(--sideText);border-color:transparent;padding:11px 12px;border-radius:8px}.nav button:hover{background:rgba(255,255,255,.08);border-color:transparent;color:#fff}.nav button.active{background:var(--brand);border-color:var(--brand);color:var(--sideTextActive);font-weight:600;box-shadow:0 2px 8px rgba(74,157,142,.4)}
     .side .help-bar{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)}
-    .side .help-bar button{display:block;width:100%;background:transparent;color:var(--sideTextMuted);border:1px solid rgba(255,255,255,.12);text-align:center;padding:9px}.side .help-bar button:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+    .side .help-bar button,.side .help-bar .guide-link{display:block;width:100%;background:transparent;color:var(--sideTextMuted);border:1px solid rgba(255,255,255,.12);text-align:center;padding:9px;border-radius:8px;text-decoration:none;margin-top:8px}.side .help-bar button:hover,.side .help-bar .guide-link:hover{color:#fff;border-color:rgba(255,255,255,.3)}
     .main{padding:26px;max-width:1320px;width:100%}.page{display:none}.page.active{display:block}.page-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.page-title h1{font-size:25px;line-height:1.2;margin:0;font-weight:800}.section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.05)}.section h2{font-size:17px;margin:0 0 13px;font-weight:750;display:flex;align-items:center}.section h2::before{content:"";width:3px;height:14px;background:var(--brand);border-radius:2px;display:inline-block;margin-right:8px;flex:0 0 auto}.grid{display:grid;gap:16px}.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}
     .field{position:relative}.field label{display:block;font-weight:700;margin-bottom:6px}.field.prefilled::after{content:"↻ 上次";position:absolute;top:0;right:0;font-size:11px;background:var(--accent);color:var(--accentText);padding:1px 7px;border-radius:999px}.row{display:flex;gap:11px;align-items:center}.row>*{flex:1}.actions{display:flex;gap:9px;flex-wrap:wrap}.choice{display:flex;flex-wrap:wrap;gap:9px}.choice button.active{background:var(--brand);border-color:var(--brand);color:#fff}.choice button.prefilled{background:var(--brandSoft);color:var(--brand);border:1px dashed var(--brand);position:relative}.choice button.prefilled::after{content:"↻";position:absolute;top:-6px;right:-4px;font-size:10px;background:var(--accent);color:var(--accentText);padding:1px 4px;border-radius:999px}.choice button.chip-good.active{background:var(--good);border-color:var(--good);color:#fff}.choice button.chip-weak.active{background:var(--warn);border-color:var(--warn);color:#fff}.choice button.muted{color:var(--muted);opacity:.55;cursor:not-allowed}.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;background:#fff;margin:3px}.tag{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 9px;border-radius:999px;margin:2px 6px 2px 0;font-weight:600}.tag.brand{background:var(--brandSoft);color:var(--brand)}.tag.gold{background:var(--accentSoft);color:var(--accentText)}.tag.warn{background:var(--warnSoft);color:var(--warnText)}.tag.danger{background:var(--dangerSoft);color:var(--dangerText)}.list{display:grid;gap:10px}.item{border:1px solid var(--line);border-radius:12px;padding:13px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.05)}.student-card{border-left:3px solid var(--brand)}.student-card.filled{border-color:rgba(74,157,142,.34);border-left-color:var(--brand);background:#fbfdfc}.student-card.focus-level-2{border-left-color:var(--warn)}.student-card.focus-level-1{border-left-color:var(--danger)}.student-head{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.statbox{display:inline-block;background:var(--accentSoft);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:3px}
     .record-summary{display:grid;grid-template-columns:110px 130px 100px 1fr 110px 90px;gap:10px;align-items:center}.record-detail{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}.bar{height:22px;background:#ececf4;border-radius:8px;overflow:hidden}.bar span{display:block;height:100%;background:var(--brand);color:#fff;text-align:right;padding-right:6px;line-height:22px;min-width:28px}.chart{display:grid;gap:8px}.metric{background:linear-gradient(135deg,#fff,var(--brandSoft));border-color:var(--line)}.metric b{color:var(--brand)}.pie{width:190px;height:190px;border-radius:50%;margin:8px auto;border:1px solid var(--line)}.legend{display:flex;gap:8px;flex-wrap:wrap}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.linechart{width:100%;height:190px}.module-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.module-head h2{margin:0}.module-head h2::before{content:"";width:3px;height:14px;background:var(--brand);border-radius:2px;display:inline-block;margin-right:8px}.table-wrap{overflow:auto}.data-table{width:100%;border-collapse:separate;border-spacing:0}.data-table th,.data-table td{border:1px solid var(--line);border-left:0;border-top:0;padding:8px;text-align:left}.data-table th:first-child,.data-table td:first-child{border-left:1px solid var(--line)}.data-table tr:first-child th{border-top:1px solid var(--line)}.data-table th{background:var(--subbg);font-weight:750;white-space:nowrap;min-width:56px}.risk{border-left:4px solid var(--danger)}.toast{position:fixed;right:20px;bottom:20px;background:#1c2826;color:#fff;padding:10px 14px;border-radius:8px;z-index:20}.modal{position:fixed;inset:0;background:rgba(28,40,38,.54);display:flex;align-items:center;justify-content:center;padding:24px;z-index:10}.modal-box{width:min(760px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:12px;border:1px solid var(--line);padding:20px;box-shadow:0 12px 40px rgba(0,0,0,.18)}
@@ -98,7 +98,7 @@
     <div class="brand">Insight <span class="dot">·</span> 见微</div>
     <div class="brand-sub" id="brandSub"></div>
     <nav class="nav" id="nav"></nav>
-    <div class="help-bar"><button data-open-help>帮助 / 使用说明</button></div>
+    <div class="help-bar"><button data-open-help>看板指南</button><a class="guide-link" href="guide.html" target="_blank" rel="noopener">详细使用说明</a></div>
   </aside>
   <main class="main">
     <section id="page-new" class="page active"></section>
@@ -114,111 +114,82 @@
 <div id="helpModal" class="modal hidden">
   <div class="modal-box">
     <div class="modal-head">
-      <h2>Insight · 见微 · 使用说明</h2>
+      <h2>Insight · 见微 · 看板指南</h2>
       <button class="icon modal-close" data-close-help title="关闭">&times;</button>
     </div>
     <div class="modal-body">
       <div class="help-doc">
-        <div class="quick">
-          <b>5 分钟上手：</b>首次打开 → 选择"高考体系"或"国际考试体系" → 进入"系统设置"配好年级班级和学生名单 → 回到"新建反馈"开始记录。每天用完记得点右上角"导出 JSON"备份一次。
-        </div>
-
         <div class="help-toc">
           <b>目录：</b>
-          <a href="#h1">1. 这是什么</a>
+          <a href="#h1">1. 页面总览</a>
           <a href="#h2">2. 新建反馈</a>
           <a href="#h3">3. 历史记录</a>
           <a href="#h4">4. 学生汇总</a>
           <a href="#h5">5. 成绩分析</a>
-          <a href="#h6">6. 数据看板</a>
+          <a href="#h6">6. 数据概览</a>
           <a href="#h7">7. 系统设置</a>
-          <a href="#h8">8. 导出与备份</a>
-          <a href="#h9">9. 数据安全</a>
-          <a href="#h10">10. 常见问题</a>
+          <a href="#h8">8. 专有名词</a>
         </div>
 
-        <h3 id="h1">1. 这是什么</h3>
-        <p>Insight · 见微是一个轻量的课后反馈记录系统。一个 HTML 文件，本地浏览器打开即用，所有数据保存在你自己的电脑里，不上传任何服务器。</p>
-        <p>支持两套体系：<b>高考体系</b>（语数英 + 物化生 / 政史地）和<b>国际考试体系</b>（托福 / 雅思 / 自定义）。两套体系下界面会自动调整，比如高考默认进入"成绩分析"，国际默认进入"新建反馈"。</p>
+        <h3 id="h1">1. 页面总览</h3>
+        <p>左侧导航是系统的主要工作区。日常使用通常从“新建反馈”开始，后续在“历史记录”“学生汇总”“成绩分析”和“数据概览”里回看、分析和导出。</p>
+        <table>
+          <tr><th>页面</th><th>主要功能</th><th>适合什么时候看</th></tr>
+          <tr><td>新建反馈</td><td>记录班级整体学情、个人反馈、授课内容和作业情况。</td><td>每节课结束后。</td></tr>
+          <tr><td>历史记录</td><td>按班级、科目、月份和关键词筛选过往反馈。</td><td>复盘某节课、查找某位学生记录时。</td></tr>
+          <tr><td>学生汇总</td><td>查看学生累计反馈、标签、作业完成率和个人时间线。</td><td>准备家长沟通、阶段反馈时。</td></tr>
+          <tr><td>成绩分析</td><td>导入考试成绩，生成学科对比、均分、及格率、排名和趋势。</td><td>月考、模考、单元测后。</td></tr>
+          <tr><td>数据概览</td><td>查看反馈总量、科目分布、班级覆盖和标签分布。</td><td>检查记录是否持续、是否有学生被遗漏时。</td></tr>
+          <tr><td>系统设置</td><td>维护体系、班级、学生、科目、内容库、标签和备份。</td><td>首次配置、学期调整、备份恢复时。</td></tr>
+        </table>
 
         <h3 id="h2">2. 新建反馈</h3>
-        <p>左侧导航点"新建反馈"。流程：</p>
+        <p>这是课后最高频的录入页面。顶部填写日期、班级、科目和授课内容；中间选择班级整体学情；下方给需要单独记录的学生填写专注度、作业完成度和简短反馈。</p>
         <ul>
-          <li><b>填基本信息</b>：日期、年级、班级、科目、课程类型（班级课 / 一对一）。</li>
-          <li><b>填授课内容</b>：可以从"单元"下拉直接选预设内容，也可手动写。</li>
-          <li><b>填班级整体反馈</b>：作业完成率、专注度、互动、纪律、掌握程度——选标签即可，系统自动生成描述文字。</li>
-          <li><b>填个人反馈</b>：在"添加学生"输入框输入姓名（支持拼音首字母），或点"全班模式"一次加全班。每个学生卡片填完即记。</li>
-          <li><b>填课后作业</b>：可以从作业库挑选，也可自由写。设置统一截止日期可选。</li>
-          <li><b>保存反馈</b>：右下角绿色按钮，保存后跳到历史记录。</li>
+          <li><b>班级整体反馈</b>：用于记录整节课的共性情况，例如互动、纪律、掌握程度。</li>
+          <li><b>个人反馈</b>：用于记录某个学生的突出表现或需要关注的问题。</li>
+          <li><b>授课内容库</b>：提前维护常用单元、知识点和作业，录入时可直接选择。</li>
         </ul>
-        <div class="warn-box">国际体系下，再次给同一学生填反馈时，系统会自动把上次的内容预填进来（带↻标记），改动即可，不用每次重填。</div>
 
         <h3 id="h3">3. 历史记录</h3>
-        <p>看所有保存过的反馈。可以按年级、班级、科目、月份、关键词筛选；点"详情"展开查看；点"编辑"修改；点"删除"移除。</p>
+        <p>历史记录是所有反馈的检索入口。可以按班级、科目、月份、关键词筛选，也可以打开记录详情进行查看、编辑或删除。</p>
+        <p>如果要找“某个学生最近几次课的表现”，优先用学生姓名或关键词搜索；如果要复盘一个阶段，优先用月份和科目筛选。</p>
 
         <h3 id="h4">4. 学生汇总</h3>
-        <p>按班级看每个学生的整体情况——记录数、作业完成率、课堂表现分布。点学生卡片上的"添加标签"可手动打 Tag（如"需关注"、"进步明显"）。系统也会根据课堂表现和成绩自动打 Tag。</p>
-        <p>下方"按学生查询"可输入姓名，看这名学生的所有历史反馈时间线。</p>
+        <p>学生汇总把分散的课堂记录聚合到学生维度。这里重点看三类信息：记录次数、作业完成率、标签变化。</p>
+        <ul>
+          <li><b>记录次数</b>：反映这个学生被关注和记录的频率。</li>
+          <li><b>作业完成率</b>：来自每次反馈中的作业完成情况。</li>
+          <li><b>学生标签</b>：包括手动标签和系统根据反馈、成绩生成的自动标签。</li>
+        </ul>
 
         <h3 id="h5">5. 成绩分析</h3>
-        <p>这是高考体系的主页。流程：</p>
+        <p>成绩分析用于处理考试后的班级和个人数据。导入成绩后，系统会生成学科对比表、均分柱状图、学生明细、需关注学生和个人趋势。</p>
         <ul>
-          <li><b>导入成绩</b>：填考试名称和日期，选班级，上传 CSV 或 Excel 文件。系统自动识别姓名列、得分列、排名列，多 Sheet 也能合并。</li>
-          <li><b>预览确认</b>：弹窗会列出每个科目的有效学生数、分数范围、问题行。检查满分填对没，确认写入。</li>
-          <li><b>看分析</b>：学科对比表、各科均分柱图、分数段分布、需关注学生（不及格 ≥3 科或连续两次不及格的会标红）。</li>
-          <li><b>看趋势</b>：点学生行的"查看趋势"，看个人总分 / 排名 / 各科 / 雷达图四张图。</li>
-          <li><b>导出 PDF</b>：可以选择"包含个人趋势页"，把需要的学生勾上，一次性生成班级 + 个人页的完整 PDF 报告。</li>
+          <li><b>学科对比表</b>：看最高分、最低分、均分、及格率。</li>
+          <li><b>学生明细表</b>：看排名、各科分数和不及格科目。</li>
+          <li><b>个人趋势</b>：看某位学生跨考试的总分、排名和各科变化。</li>
         </ul>
 
-        <h3 id="h6">6. 数据看板（KPI）</h3>
-        <p>"新建反馈"和"成绩分析"页顶端有四个 KPI 卡：本月反馈数、活跃学生、待补反馈、需重点关注。点任意一张可跳到对应页面。"待补反馈"需要先在"系统设置 → 学生名单管理"里填这个班的"每周课次"才会有数。</p>
+        <h3 id="h6">6. 数据概览</h3>
+        <p>数据概览用于看“系统里已经沉淀了多少数据”。常用指标包括累计反馈数、覆盖科目数、班级数、学生数、各科记录分布和标签分布。</p>
+        <p>如果某个科目记录明显偏少，说明这段时间该科反馈沉淀不足；如果“需关注”类标签集中出现，适合进一步回到学生汇总查看具体学生。</p>
 
         <h3 id="h7">7. 系统设置</h3>
-        <p>在这里维护所有基础数据：</p>
-        <ul>
-          <li><b>考试体系</b>：随时切换高考 / 国际，重新跑配置向导。</li>
-          <li><b>Tag 库</b>：管理学生标签的全局词库。</li>
-          <li><b>年级 / 班级</b>：增删年级，每个年级下管理班级。输入数字 3 会自动生成"高一 3 班"这种名称。</li>
-          <li><b>科目</b>：管理科目列表，设满分、及格线、分数粒度。</li>
-          <li><b>授课内容库</b>：按科目维护单元、知识点、作业库。在"新建反馈"选单元时会自动调出来。</li>
-          <li><b>内容库管理</b>：单独导出 / 导入授课内容（不含学生数据），方便老师之间分享。</li>
-          <li><b>学生名单</b>：按班级管理。可 CSV 批量导入（第一列是姓名）。也在这里设每周课次。</li>
-          <li><b>鼓励话语模板</b>：保存反馈时会随机选一句结尾。</li>
-          <li><b>高频词</b>：填"主要问题"时常用的问题词汇。</li>
-          <li><b>学期存档与重置</b>：学期末用——导出当前学期，再点"重置为新学期"。历史存档保持只读可查。</li>
-        </ul>
+        <p>系统设置用于维护基础资料。首次使用时主要完成体系选择、班级创建、学生名单导入、科目设置和授课内容库配置。日常使用中，最重要的是定期导出 JSON 备份。</p>
 
-        <h3 id="h8">8. 导出与备份</h3>
-        <p>三种导出方式：</p>
-        <ul>
-          <li><b>JSON 备份</b>（系统设置 → 导出当前学期数据）：完整数据快照，建议<b>每天用完导一次</b>。换电脑、浏览器崩溃，全靠这个还原。</li>
-          <li><b>Excel 成绩对比</b>（成绩分析 → 导出 Excel）：跨考试的全科和分科对比表，给家长或备课用。</li>
-          <li><b>PDF 成绩报告</b>（成绩分析 → 导出 PDF）：班级概览 + 可选的个人趋势页，浏览器打印窗口生成。</li>
-        </ul>
-
-        <h3 id="h9">9. 数据安全（必读）</h3>
-        <div class="danger-box">
-          <b>三件需要知道的事：</b>
-          <ul style="margin:6px 0 0">
-            <li>清除浏览器缓存会清空所有数据。</li>
-            <li>换电脑或换浏览器，数据不会跟着走。</li>
-            <li>浏览器崩溃偶发丢数据。</li>
-          </ul>
-        </div>
-        <p><b>对策只有一个：定期导出 JSON。</b>建议放进网盘或邮件给自己。换设备时用"从 JSON 覆盖恢复"导回来。</p>
-
-        <h3 id="h10">10. 常见问题</h3>
-        <h4>导入成绩说"未识别到姓名列"怎么办？</h4>
-        <p>检查表格第一行是不是表头（如"姓名"、"学号"、"语文"），第一列或某一列是不是中文姓名。把多余的标题行（如"X 班月考成绩单"）删掉再重试。</p>
-        <h4>同一名学生在不同班级出现怎么办？</h4>
-        <p>系统按"班级 + 姓名"识别。换班的学生在新班级会算作新人。如要保留历史，导出 JSON 后手动调整 classId。</p>
-        <h4>能不能多人协作？</h4>
-        <p>暂时不能。数据存在浏览器本地。多人协作只能靠互相导出 / 导入 JSON。</p>
-        <h4>支持手机用吗？</h4>
-        <p>能用，但操作密集的页面（成绩分析、设置）建议用电脑。手机适合临时新建反馈。</p>
-        <h4>反馈记录会自动备份吗？</h4>
-        <p>不会。请养成<b>每天导出 JSON</b> 的习惯。</p>
-      </div>
+        <h3 id="h8">8. 专有名词</h3>
+        <table>
+          <tr><th>名词</th><th>含义</th></tr>
+          <tr><td>体系</td><td>指高考体系或国际考试体系，会影响默认科目、标签和首页。</td></tr>
+          <tr><td>内容库</td><td>老师预先维护的授课单元、知识点和作业库。</td></tr>
+          <tr><td>反馈记录</td><td>一次课后保存下来的班级学情和学生个人反馈。</td></tr>
+          <tr><td>标签</td><td>用于概括学生状态的短词，例如“进步明显”“需复盘错题”。</td></tr>
+          <tr><td>自动标签</td><td>系统根据反馈、作业、成绩等规则自动生成的标签。</td></tr>
+          <tr><td>JSON 备份</td><td>完整数据快照，包含反馈、成绩、班级、学生和设置。</td></tr>
+          <tr><td>学期存档</td><td>学期末保存当前数据为只读档案，再开始新学期。</td></tr>
+        </table>
+      </div></div>
     </div>
   </div>
 </div>
